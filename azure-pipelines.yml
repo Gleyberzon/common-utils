@@ -1,0 +1,22 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- script: |
+    echo "Checking Java and Maven versions..."
+    java -version
+    mvn -v
+  displayName: 'Check Java and Maven versions'
+
+- script: |
+    echo "Building project with Maven..."
+    mvn clean install
+  displayName: 'Build project with Maven'
+
+- script: |
+    echo "Running Run_selenium_feature.java..."
+    java -cp target/classes:target/test-classes:$(mvn dependency:build-classpath | grep -v INFO) src/test/java/Run_selenium_feature.java
+  displayName: 'Run Selenium Test'
