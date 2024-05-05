@@ -18,6 +18,5 @@ steps:
 
 - script: |
     echo "Running Run_selenium_feature.java..."
-    for /f "delims=" %%i in ('mvn dependency:build-classpath ^| findstr /v INFO') do set classpath=%%i
-    java -cp target/classes;target/test-classes;%classpath% src/test/java/Run_selenium_feature.java
+    mvn test -Dtest=Run_selenium_feature
   displayName: 'Run Selenium Test'
