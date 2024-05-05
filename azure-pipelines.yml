@@ -13,10 +13,10 @@ steps:
 
 - script: |
     echo "Building project with Maven..."
-    mvn clean install
+    mvn clean install -e
   displayName: 'Build project with Maven'
 
 - script: |
     echo "Running Run_selenium_feature.java..."
-    mvn test -Dtest=Run_selenium_feature
+    mvn test -Dtest=Run_selenium_feature -e
   displayName: 'Run Selenium Test'
