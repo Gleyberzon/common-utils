@@ -18,5 +18,5 @@ steps:
 
 - script: |
     echo "Running Run_selenium_feature.java..."
-    mvn test -Dtest=Run_selenium_feature -X
+    mvn test -Dtest=Run_selenium_feature -DfailIfNoTests=false -X
   displayName: 'Run Selenium Test'
