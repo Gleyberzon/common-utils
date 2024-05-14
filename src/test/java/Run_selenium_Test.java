@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import static systemUtils.SystemCommonUtils.sleep;
 
-public class Run_selenium_feature {
+public class Run_selenium_Test {
     public static void main(String[] args) {
         ChromeOptions options = new ChromeOptions();
         TesnetWebDriver tesnetWebDriver = new TesnetWebDriver(options);
