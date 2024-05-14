@@ -1,6 +1,7 @@
 
 import drivers.TesnetWebDriver;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 
@@ -14,7 +15,8 @@ public class Run_selenium_Test {
         TesnetWebDriver tesnetWebDriver = new TesnetWebDriver(options);
 
         tesnetWebDriver.get("https://www.google.com");
-        sleep(3000);
+        sleep(2000);
+        tesnetWebDriver.findElement(By.name("q")).sendKeys("N12");
         tesnetWebDriver.close();
         tesnetWebDriver.quit();
     }
