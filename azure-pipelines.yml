@@ -15,8 +15,3 @@ steps:
     echo "Building project with Maven..."
     mvn clean install -X
   displayName: 'Build project with Maven'
-
-- script: |
-    echo "Running Run_selenium_Test.java..."
-    mvn test -Dtest=Run_selenium_Test -X
-  displayName: 'Run Selenium Test'
