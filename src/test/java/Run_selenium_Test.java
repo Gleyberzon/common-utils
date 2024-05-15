@@ -17,6 +17,7 @@ public class Run_selenium_Test {
         TesnetWebDriver tesnetWebDriver = new TesnetWebDriver(options);
 
         tesnetWebDriver.get("https://www.google.com");
+        tesnetWebDriver.manage().window().maximize();
         sleep(2000);
         WebElement searchBox = tesnetWebDriver.findElement(By.name("q"));
         searchBox.sendKeys("N12");
